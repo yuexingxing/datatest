@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 获取装车任务的配置文件 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  命名空间应该是对应接口的包名+类名(接口名称)  这里是myBatis的配置  -->
+<mapper namespace="com.zd.mapper">
+
+    <parameterMap type="java.util.Map" id="input_mp_flag">
+        <parameter property="user_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="node_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="flag" mode="OUT" jdbcType="INTEGER"/>
+    </parameterMap>
+
+    <!--注意:下面执行sql是SqlServer的语法,不是mySql的写法,Shit。。-->
+    <!--<select id="app_gettaskname_list" parameterMap="input_mp_task" statementType="CALLABLE" resultMap="resultMap_task">-->
+<!--&#45;&#45;         exec dbo.app_gettaskname_list #{user_id},#{node_id},#{link_num},#{node_num},#{out_success},#{out_code},#{out_message}-->
+           <!--{exec dbo.app_gettaskname_list (?,?,?,?,?,?,?)}-->
+    <!--</select>-->
+
+    <!-- 这个调用存储过程要遵循my-batis写法 -->
+    <select id="app_action_get_flag" parameterMap="input_mp_flag" statementType="CALLABLE" resultMap="resultMap_flag">
+        {call dbo.app_action_get_flag (?,?,?)}
+    </select>
+
+    <resultMap type="java.util.Map" id="resultMap_flag">
+
+    </resultMap>
+
+</mapper>

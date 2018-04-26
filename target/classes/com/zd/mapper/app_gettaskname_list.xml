@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 获取装车任务的配置文件 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  命名空间应该是对应接口的包名+类名(接口名称)  这里是myBatis的配置  -->
+<mapper namespace="com.zd.mapper">
+
+    <parameterMap type="java.util.Map" id="input_mp_task">
+        <parameter property="user_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="route_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="node_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="link_num" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="node_num" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="type" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="flag" mode="OUT" jdbcType="INTEGER"/>
+        <parameter property="out_success" mode="OUT" jdbcType="INTEGER"/>
+        <parameter property="out_code" mode="OUT" jdbcType="VARCHAR"/>
+        <parameter property="out_message" mode="OUT" jdbcType="VARCHAR"/>
+    </parameterMap>
+
+    <!--注意:下面执行sql是SqlServer的语法,不是mySql的写法,Shit。。-->
+    <!--<select id="app_gettaskname_list" parameterMap="input_mp_task" statementType="CALLABLE" resultMap="resultMap_task">-->
+<!--&#45;&#45;         exec dbo.app_gettaskname_list #{user_id},#{node_id},#{link_num},#{node_num},#{out_success},#{out_code},#{out_message}-->
+           <!--{exec dbo.app_gettaskname_list (?,?,?,?,?,?,?)}-->
+    <!--</select>-->
+
+    <!-- 这个调用存储过程要遵循my-batis写法 -->
+    <select id="app_gettaskname_list" parameterMap="input_mp_task" statementType="CALLABLE" resultMap="resultMap_task">
+        {call dbo.app_gettaskname_list (?,?,?,?,?,?,?,?,?,?)}
+    </select>
+
+    <resultMap type="java.util.Map" id="resultMap_task">
+        <result column="typestr" property="typestr"/>
+        <result column="id" property="id"/>
+        <result column="task_name" property="task_name"/>
+        <result column="License_Plate" property="license_plate"/>
+        <result column="Round_No" property="round_no"/>
+        <result column="Linkmane" property="linkman"/>
+        <result column="Phone" property="phone"/>
+    </resultMap>
+
+</mapper>

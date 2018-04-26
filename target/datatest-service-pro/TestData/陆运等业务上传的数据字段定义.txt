@@ -1,0 +1,60 @@
+
+//陆运装货
+
+	public static final String KEY_CacheID = "CacheId";//CacheId任务单号
+	public static final String KEY_TASKNAME = "taskName";  //任务名称
+	public static final String KEY_ScanType = "ScanType";//扫描类型
+	public static final String KEY_ScanTime = "ScanTime";//扫描时间
+	public static final String KEY_PACKBARCODE = "packBarcode"; //包装条码
+	public static final String KEY_PACKNUMBER = "packNumber"; //包装号码
+	public static final String KEY_VehicleNumbers = "VehicleNumbers";//车牌号
+	public static final String KEY_TRAIN = "train";  //车次
+	public static final String KEY_DRIVERPHONE = "司机手机号";  //司机手机号
+	public static final String KEY_Memo = "Memo";  //备注、说明
+	public static final String KEY_PlanCount = "PlanCount";//载入数
+	public static final String KEY_PracticalCount = "PracticalCount";//扫描数
+
+
+//陆运-单件录入 
+
+	public static final String KEY_ScanType = "ScanType";//扫描类型
+	public static final String KEY_ScanTime = "ScanTime";//扫描时间
+	public static final String KEY_OPERATION_LINK = "operationLink";  //操作环节
+	public static final String KEY_SubBoxNum = "SubBoxNum";//总箱号
+	public static final String KEY_MinuteHawb = "MinuteHawb";//总条码
+	public static final String KEY_GoodsName = "GoodsName";//品名
+	public static final String KEY_Length = "Length";//长
+	public static final String KEY_Width = "Width";//宽
+	public static final String KEY_Height = "Height";//高
+	public static final String KEY_Weight = "Weight";//重量
+	public static final String KEY_Message = "Message";//物流信息
+	public static final String KEY_MarkPic = "MarkPic";//唛头照片
+	public static final String KEY_CargoPic = "CargoPic";//货物照片
+	public static final String KEY_MarkFile = "MarkFile";//唛头照片路径
+	public static final String KEY_CargoFile = "CargoFile";//货物照片路径
+
+
+//陆运异常
+
+	public static final String KEY_ScanType = "ScanType";//扫描类型
+	public static final String KEY_ScanTime = "ScanTime";//扫描时间
+	public static final String KEY_OPERATION_LINK = "operationLink";  //操作环节
+	public static final String KEY_PACKBARCODE = "packBarcode"; //包装条码
+	public static final String KEY_PACKNUMBER = "packNumber"; //包装号码
+	public static final String KEY_Memo = "Memo";  //备注、说明
+	public static final String KEY_PracticalCount = "PracticalCount";//扫描数
+	public static final String KEY_AbnormalPic = "AbnormalPic";//异常图片
+	public static final String KEY_AbnormalFile = "AbnormalFile";//异常图片路径
+
+
+//陆运-退运
+
+	public static final String KEY_ScanType = "ScanType";//扫描类型
+	public static final String KEY_ScanTime = "ScanTime";//扫描时间
+	public static final String KEY_ReturnedCargoCause = "ReturnedCargoCause";//退运原因
+	public static final String KEY_ReturnedCargoLink = "ReturnedCargoLink";//退运环节
+	public static final String KEY_MinuteHawb = "MinuteHawb";//总条码
+	public static final String KEY_PracticalCount = "PracticalCount";//扫描数
+
+
+     

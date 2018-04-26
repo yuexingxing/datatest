@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 获取装车任务的配置文件 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  命名空间应该是对应接口的包名+类名(接口名称)  这里是myBatis的配置  -->
+<mapper namespace="com.zd.mapper">
+
+    <!--注意:下面执行sql是SqlServer的语法,不是mySql的写法,Shit。。-->
+    <select id="app_getloadcar_tastlist" parameterMap="input_mp" statementType="CALLABLE" resultMap="resultMap">
+        exec dbo.app_getloadcar_tastlist #{user_id},#{node_id},#{out_success},#{out_code},#{out_message}
+    </select>
+
+    <parameterMap type="java.util.Map" id="input_mp">
+        <parameter property="user_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="node_id" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="out_success" mode="OUT" jdbcType="INTEGER"/>
+        <parameter property="out_code" mode="OUT" jdbcType="VARCHAR"/>
+        <parameter property="out_message" mode="OUT" jdbcType="VARCHAR"/>
+    </parameterMap>
+
+    <resultMap type="java.util.Map" id="resultMap">
+        <result column="typestr" property="typestr" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="id" property="id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="task_code" property="task_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="task_name" property="task_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="id_1" property="id_1" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="License_Plate" property="license_plate" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="Round_No" property="round_no" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="Linkmane" property="linkman" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="Phone" property="phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="route_points_id" property="route_points_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--select 'biniduser' as typestr,-->
+    <!--a.id,a.task_code,-->
+    <!--a.task_name ,-->
+    <!--b.id_1,-->
+    <!--a.route_points_id,-->
+    <!--c.License_Plate,-->
+    <!--c.Round_No,-->
+    <!--e.Nickname Linkmane,-->
+    <!--d.Phone-->
+
+</mapper>

@@ -1,0 +1,47 @@
+{
+  "operation_type": "upload_scandata",
+  "scan_type": "air",
+  "header": {
+    "route_task_id": "ECE431E5-0A7B-4038-B925-75AFCC07CD2E",
+    "upload_time": "2017-04-05 17:29:23.443",
+    "load_number": 10,
+    "link_no": "1",
+    "route_points_id": "D06B86B3-2C16-4A37-9F72-2F5CCC9DACD9",
+    "scan_user": "1",
+    "scan_user_id": "80D8FD19-4358-413F-A606-E45206E231A5",
+    "scan_time": "2017-04-05 17:30:23.890",
+    "gps_coordx": "121.358297",
+    "gps_coordy": "31.226501",
+    "device_id": "8520198001"
+  },
+  "detail": [
+    {
+      "id": "C9CC29CB-F0B2-4C02-B878-786D3F3250BA",
+      "goods_type": "1",
+      "goods_id": "1CA8C455-B68A-450E-B150-0174AA7BF532",
+      "goods_code": "PYFB-TZ-5-367/575",
+      "goods_barcode": "TYCS5d20170101-00100000025",
+      "piece_number": 1,
+      "task_param_1": "ABC001",
+      "task_param_2": "001",
+      "gc_flag": "false",
+      "scan_user": "1",
+      "scan_user_id": "80D8FD19-4358-413F-A606-E45206E231A5",
+      "scan_time": "2017-04-05 17:29:23.443"
+    },
+    {
+      "id": "C9CC29CB-F0B2-4C02-B878-786D3F3250BA",
+      "goods_type": "1",
+      "goods_id": "1CA8C455-B68A-450E-B150-0174AA7BF532",
+      "goods_code": "PYFB-TZ-5-367/575",
+      "goods_barcode": "TYCS5d20170101-00100000025",
+      "piece_number": 1,
+      "task_param_1": "ABC001",
+      "task_param_2": "001",
+      "gc_flag": "false",
+      "scan_user": "1",
+      "scan_user_id": "80D8FD19-4358-413F-A606-E45206E231A5",
+      "scan_time": "2017-04-05 17:29:45.000"
+    }
+  ]
+}

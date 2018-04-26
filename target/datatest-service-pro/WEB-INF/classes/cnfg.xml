@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setting>
+	<server>
+		<!-- <picfile_basepath>C:\e3sync_data\</picfile_basepath> -->
+		<picfile_basepath>http://122.225.117.142:9516/ScanException\</picfile_basepath>
+	</server>
+</setting>
